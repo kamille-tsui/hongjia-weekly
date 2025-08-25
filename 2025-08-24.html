@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>江门宏佳市场分析及行业资讯周报</title>
+    <title>江门宏佳市场分析周报</title>
     <script src="https://cdn.tailwindcss.com/3.3.3"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
@@ -58,9 +58,13 @@
         }
         .chart-container {
             height: 350px;
-            margin: 0 auto;
-            max-width: 800px;
+            width: 100%;
             position: relative;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
         }
         .timeline-item {
             position: relative;
@@ -103,21 +107,62 @@
             margin-right: 8px;
             margin-bottom: 8px;
         }
-        .sticky-nav {
-            position: sticky;
-            top: 20px;
-            align-self: flex-start;
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 100;
+            padding: 1rem;
+            overflow-y: auto;
         }
-        .sortable:hover {
-            cursor: pointer;
-            background-color: rgba(99, 102, 241, 0.05);
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            color: #4f46e5;
+            font-weight: 500;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: #4f46e5;
         }
     </style>
 </head>
 <body class="min-h-screen">
     <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 移动端菜单按钮 -->
+        <div class="md:hidden flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">江门宏佳市场分析周报</h1>
+            <button id="mobileMenuButton" class="text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="mobile-menu">
+            <button id="mobileMenuClose" class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="text-xl font-bold mb-4">导航菜单</h2>
+            <a href="#market-share" class="nav-link">细分市场份额</a>
+            <a href="#visualization" class="nav-link">市场占比可视化</a>
+            <a href="#technology" class="nav-link">技术对比分析</a>
+            <a href="#news" class="nav-link">行业资讯</a>
+            <a href="#strategy" class="nav-link">竞争策略</a>
+        </div>
+
         <!-- 头部 -->
-        <header class="text-center mb-12">
+        <header class="text-center mb-12 hidden md:block">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">江门宏佳市场分析周报</h1>
             <p class="text-lg text-gray-600">2025年8月18-24日 | 细分市场与技术对比分析</p>
             <div class="flex justify-center mt-6">
@@ -132,7 +177,7 @@
             <!-- 主内容区 -->
             <div class="flex-1">
                 <!-- 细分市场份额 -->
-                <section class="glass-card p-6 md:p-8 mb-8">
+                <section id="market-share" class="glass-card p-6 md:p-8 mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-3">
                             <i class="fas fa-chart-pie"></i>
@@ -185,7 +230,7 @@
                 </section>
 
                 <!-- 企业占比可视化柱状图 -->
-                <section class="glass-card p-6 md:p-8 mb-8">
+                <section id="visualization" class="glass-card p-6 md:p-8 mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
                             <i class="fas fa-chart-bar"></i>
@@ -211,7 +256,7 @@
                 </section>
 
                 <!-- 技术对比 -->
-                <section class="glass-card p-6 md:p-8 mb-8">
+                <section id="technology" class="glass-card p-6 md:p-8 mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
                             <i class="fas fa-microscope"></i>
@@ -340,7 +385,7 @@
                 </section>
 
                 <!-- 行业资讯 -->
-                <section class="glass-card p-6 md:p-8 mb-8">
+                <section id="news" class="glass-card p-6 md:p-8 mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3">
                             <i class="fas fa-newspaper"></i>
@@ -392,7 +437,7 @@
                 </section>
 
                 <!-- 竞争策略建议 -->
-                <section class="glass-card p-6 md:p-8">
+                <section id="strategy" class="glass-card p-6 md:p-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
                             <i class="fas fa-lightbulb"></i>
@@ -458,9 +503,9 @@
                 </section>
             </div>
 
-            <!-- 悬浮导航 -->
+            <!-- 桌面端悬浮导航 -->
             <div class="hidden md:block md:w-64 lg:w-72">
-                <div class="glass-card p-4 sticky-nav">
+                <div class="glass-card p-4 sticky top-4">
                     <h3 class="font-semibold text-lg text-gray-800 mb-4">目录导航</h3>
                     <ul class="space-y-2">
                         <li>
@@ -494,6 +539,26 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // 移动端菜单控制
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+            });
+
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+
+            // 点击菜单项后关闭菜单
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
             // 全球市场柱状图
             const globalCtx = document.getElementById('globalMarketChart').getContext('2d');
             const globalChart = new Chart(globalCtx, {
@@ -514,7 +579,7 @@
                         borderWidth: 1
                     }, {
                         label: '金属软磁粉芯（%）',
-                        data: [0, 0, 0, 0, '', 0, 21, 15, 12],
+                        data: [0, 0, 0, 0, 0, 0, 21, 15, 12],
                         backgroundColor: 'rgba(231, 76, 60, 0.7)',
                         borderColor: 'rgba(231, 76, 60, 1)',
                         borderWidth: 1
@@ -522,15 +587,19 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         x: {
                             stacked: false,
                             title: {
                                 display: true,
                                 text: '企业名称',
-                                font: {
-                                    weight: 'bold'
-                                }
+                                font: { weight: 'bold' }
+                            },
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                font: { size: window.innerWidth < 768 ? 8 : 10 }
                             }
                         },
                         y: {
@@ -540,20 +609,13 @@
                             title: {
                                 display: true,
                                 text: '市场占比（%）',
-                                font: {
-                                    weight: 'bold'
-                                }
+                                font: { weight: 'bold' }
                             }
                         }
                     },
                     plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: '全球各细分市场企业占比分布'
-                        }
+                        legend: { position: 'top' },
+                        title: { display: true, text: '全球各细分市场企业占比分布' }
                     }
                 }
             });
@@ -566,14 +628,14 @@
                     labels: ['东睦股份', '华域汽车', '扬州保来得', '江门宏佳', '百达精工', '粤海华金', '铂科新材', '东睦科达', '天通磁材'],
                     datasets: [{
                         label: '粉末冶金结构件（%）',
-                        data: [26.7, 12, 7, 0, 0, 0, 0, '', 0],
+                        data: [26.7, 12, 7, 0, 0, 0, 0, 0, 0],
                         backgroundColor: 'rgba(52, 152, 219, 0.7)',
                         borderColor: 'rgba(52, 152, 219, 1)',
                         borderWidth: 1
                     }, {
                         label: '压缩机平衡块（%）',
                         data: [0, 0, 0, 35, 25, 20, 0, 0, 0],
-                        backgroundColor: 'rgba(46, 204, 113, A0.7)',
+                        backgroundColor: 'rgba(46, 204, 113, 0.7)',
                         borderColor: 'rgba(46, 204, 113, 1)',
                         borderWidth: 1
                     }, {
@@ -586,14 +648,19 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         x: {
                             stacked: false,
                             title: {
                                 display: true,
-                                text: '企业名称',font: {
-                                    weight: 'bold'
-                                }
+                                text: '企业名称',
+                                font: { weight: 'bold' }
+                            },
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                font: { size: window.innerWidth < 768 ? 8 : 10 }
                             }
                         },
                         y: {
@@ -603,20 +670,13 @@
                             title: {
                                 display: true,
                                 text: '市场占比（%）',
-                                font: {
-                                    weight: 'bold'
-                                }
+                                font: { weight: 'bold' }
                             }
                         }
                     },
                     plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: '中国各细分市场企业占比分布'
-                        }
+                        legend: { position: 'top' },
+                        title: { display: true, text: '中国各细分市场企业占比分布' }
                     }
                 }
             });
@@ -650,6 +710,12 @@
                         behavior: 'smooth'
                     });
                 });
+            });
+
+            // 窗口大小变化时重新渲染图表
+            window.addEventListener('resize', function() {
+                globalChart.resize();
+                chinaChart.resize();
             });
         });
     </script>
