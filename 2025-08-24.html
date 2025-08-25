@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江门宏佳市场分析及行业资讯周报</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: rgba(99, 102, 241, 0.2);
+            z-index: -1;
+            border-radius: 2px;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .chart-container {
+            height: 350px;
+            margin: 0 auto;
+            max-width: 800px;
+            position: relative;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #4f46e5;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            bottom: -2rem;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+        .last-timeline::after {
+            display: none;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        .data-pill {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            background: rgba(99, 102, 241, 0.1);
+            color: #4f46e5;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+        }
+        .sortable:hover {
+            cursor: pointer;
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 头部 -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">江门宏佳市场分析周报</h1>
+            <p class="text-lg text-gray-600">2025年8月18-24日 | 细分市场与技术对比分析</p>
+            <div class="flex justify-center mt-6">
+                <div class="glass-card px-6 py-3 inline-flex items-center">
+                    <i class="fas fa-calendar-alt text-indigo-500 mr-2"></i>
+                    <span>2025年8月第3周</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- 主内容区 -->
+            <div class="flex-1">
+                <!-- 细分市场份额 -->
+                <section class="glass-card p-6 md:p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-3">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        全球及中国细分市场份额与龙头企业
+                    </h2>
+                    
+                    <div class="table-responsive">
+                        <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable">细分市场</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable">全球市场规模</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable">中国市场规模</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable">全球龙头占全球市场</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable">中国龙头占中国市场</th> 
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">粉末冶金结构件</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">81亿美元（2025E）</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">28亿美元</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">GKN（8%）</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">东睦股份（26.7%）</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">压缩机平衡块</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">12亿美元</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">8.5亿美元</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">吉凯恩（15%）</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">江门宏佳（35%）</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">金属软磁粉芯</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">48亿美元</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">31亿美元</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">铂科新材（21%）</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">铂科新材（32%）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-gray-500">
+                        <p><strong>数据说明：</strong></p>
+                        <p>- 全球市场份额来源：QYResearch《2025年粉末冶金行业报告》</p>
+                        <p>- 中国市场份额来源：中国粉末冶金协会、企业年报</p>
+                    </div>
+                </section>
+
+                <!-- 企业占比可视化柱状图 -->
+                <section class="glass-card p-6 md:p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        细分市场企业占比可视化
+                    </h2>
+
+                    <!-- 全球市场柱状图 -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">全球市场占比</h3>
+                        <div class="chart-container">
+                            <canvas id="globalMarketChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- 中国市场柱状图 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">中国市场占比</h3>
+                        <div class="chart-container">
+                            <canvas id="chinaMarketChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 技术对比 -->
+                <section class="glass-card p-6 md:p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        江门宏佳与各细分市场龙头技术对比
+                    </h2>
+
+                    <!-- 粉末冶金结构件市场 -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">1. 粉末冶金结构件市场（对比东睦股份）</h3>
+                        <div class="table-responsive">
+                            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">指标</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">江门宏佳</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">东睦股份</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">核心产品</td>
+                                        <td class="px-6 py-4">不锈钢粉末、MIM结构件</td>
+                                        <td class="px-6 py-4">粉末冶金轴承、MIM折叠屏铰链</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">技术路线</td>
+                                        <td class="px-6 py-4">水雾化制粉（球形度＞90%）</td>
+                                        <td class="px-6 py-4">金属注射成形（MIM）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">应用领域</td>
+                                        <td class="px-6 py-4">空调压缩机、新能源汽车</td>
+                                        <td class="px-6 py-4">消费电子、机器人灵巧手</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">关键参数</td>
+                                        <td class="px-6 py-4">粉末氧含量＜500ppm，密度7.8-8.0g/cm³</td>
+                                        <td class="px-6 py-4">零件精度±0.05mm，材料利用率95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">客户覆盖</td>
+                                        <td class="px-6 py-4">大金、日立、三菱</td>
+                                        <td class="px-6 py-4">华为、特斯拉、博世</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 压缩机平衡块市场 -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">2. 压缩机平衡块市场（对比百达精工）</h3>
+                        <div class="table-responsive">
+                            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">指标</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">江门宏佳</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">百达精工</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">市场份额</td>
+                                        <td class="px-6 py-4">国内35%</td>
+                                        <td class="px-6 py-4">国内25%</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">工艺优势</td>
+                                        <td class="px-6 py-4">超高压水雾化+烧结一体化</td>
+                                        <td class="px-6 py-4">精密铸造+粉末冶金复合工艺</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">成本控制</td>
+                                        <td class="px-6 py-4">材料利用率95%，单位成本较铸造低20%</td>
+                                        <td class="px-6 py-4">多工艺整合，平衡块/叶片联产降低边际成本</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">产品精度</td>
+                                        <td class="px-6 py-4">尺寸公差±0.03mm，重量误差＜2%</td>
+                                        <td class="px-6 py-4">公差±0.05mm，适配美芝/凌达压缩机</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 金属软磁粉芯市场 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">3. 金属软磁粉芯市场（对比铂科新材）</h3>
+                        <div class="table-responsive">
+                            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">指标</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">江门宏佳</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">铂科新材</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">产品类型</td>
+                                        <td class="px-6 py-4">软磁合金粉末（研发中）</td>
+                                        <td class="px-6 py-4">铁硅铝粉芯、芯片电感</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">技术壁垒</td>
+                                        <td class="px-6 py-4">气雾化制粉（3D打印粉末研发）</td>
+                                        <td class="px-6 py-4">全产业链技术（制粉-磁芯-电感）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">性能参数</td>
+                                        <td class="px-6 py-4">饱和磁通密度1.5T，磁导率50-200</td>
+                                        <td class="px-6 py-4">铁硅铝损耗低30%，频率覆盖5kHz-10MHz</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">应用场景</td>
+                                        <td class="px-6 py-4">储能电感（试点）</td>
+                                        <td class="px-6 py-4">光伏逆变器、英伟达GPU供电模块</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 行业资讯 -->
+                <section class="glass-card p-6 md:p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        2025年8月行业资讯（8.18-8.24）
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">吉凯恩粉末冶金轴向磁通电机专利（8.19）</h3>
+                            <p class="text-gray-700 mb-2">开发可缩小电机轴向尺寸的平衡块结构，适配新能源汽车轻量化需求。</p>
+                            <a href="https://m.toutiao.com/group/7540281237605204489/" class="text-indigo-600 hover:underline inline-flex items-center" target="_blank">
+                                <i class="fas fa-external-link-alt mr-1"></i> 原文链接
+                            </a>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">东睦股份收购上海富驰34.75%股权（8.24）</h3>
+                            <p class="text-gray-700 mb-2">强化MIM业务，目标2025年机器人灵巧手关节量产。</p>
+                            <a href="http://m.toutiao.com/group/7541841736633418259/" class="text-indigo-600 hover:underline inline-flex items-center" target="_blank">
+                                <i class="fas fa-external-link-alt mr-1"></i> 原文链接
+                            </a>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">铂科新材铁硅5代粉芯量产（8.22）</h3>
+                            <p class="text-gray-700 mb-2">损耗降低30%，适配10MHz高频应用，进入华为数字能源供应链。</p>
+                            <a href="https://xueqiu.com/3468009609/320805270" class="text-indigo-600 hover:underline inline-flex items-center" target="_blank">
+                                <i class="fas fa-external-link-alt mr-1"></i> 原文链接
+                            </a>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">钢城经开区粉末冶金产能扩张（8.13）</h3>
+                            <p class="text-gray-700 mb-2">鲁银新材新增10万吨制粉产能，亚洲第一制粉基地地位巩固。</p>
+                            <a href="http://m.toutiao.com/group/7537986215987921462/" class="text-indigo-600 hover:underline inline-flex items-center" target="_blank">
+                                <i class="fas fa-external-link-alt mr-1"></i> 原文链接
+                            </a>
+                        </div>
+                        
+                        <div class="timeline-item last-timeline">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">苏州卓米烧结治具专利（8.19）</h3>
+                            <p class="text-gray-700 mb-2">陶瓷定位卡设计解决粉末冶金件塌陷问题，良率提升至98%。</p>
+                            <a href="http://m.toutiao.com/group/7540183804926050870/" class="text-indigo-600 hover:underline inline-flex items-center" target="_blank">
+                                <i class="fas fa-external-link-alt mr-1"></i> 原文链接
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 竞争策略建议 -->
+                <section class="glass-card p-6 md:p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        竞争策略建议
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-2">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                差异化突破
+                            </h3>
+                            <ul class="text-gray-700 space-y-2 pl-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2 text-sm"></i>
+                                    聚焦不锈钢粉末细分领域，依托珠三角区位优势，拓展新能源汽车电机磁芯市场。
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-2">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                技术防御
+                            </h3>
+                            <ul class="text-gray-700 space-y-2 pl-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-green-500 mt-1 mr-2 text-sm"></i>
+                                    加快气雾化3D打印粉末研发，应对东睦MIM工艺对传统平衡块市场的替代威胁。
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-red-600 mr-2">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                成本优化
+                            </h3>
+                            <ul class="text-gray-700 space-y-2 pl-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-red-500 mt-1 mr-2 text-sm"></i>
+                                    扩大水雾化产能至3万吨/年，通过规模效应降低单位成本8-10%。
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-lg text-gray-800 mb-3 flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 mr-2">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                数据来源
+                            </h3>
+                            <p class="text-gray-700">QYResearch、GKN年报、东睦股份2024半年报、行业协会报告</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 悬浮导航 -->
+            <div class="hidden md:block md:w-64 lg:w-72">
+                <div class="glass-card p-4 sticky-nav">
+                    <h3 class="font-semibold text-lg text-gray-800 mb-4">目录导航</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#market-share" class="nav-link text-gray-700 hover:text-indigo-600 block py-1">细分市场份额</a>
+                        </li>
+                        <li>
+                            <a href="#visualization" class="nav-link text-gray-700 hover:text-indigo-600 block py-1">市场占比可视化</a>
+                        </li>
+                        <li>
+                            <a href="#technology" class="nav-link text-gray-700 hover:text-indigo-600 block py-1">技术对比分析</a>
+                        </li>
+                        <li>
+                            <a href="#news" class="nav-link text-gray-700 hover:text-indigo-600 block py-1">行业资讯</a>
+                        </li>
+                        <li>
+                            <a href="#strategy" class="nav-link text-gray-700 hover:text-indigo-600 block py-1">竞争策略</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <div class="mb-4">
+                <a href="https://space.coze.cn" class="text-indigo-600 hover:underline">created by coze space</a>
+            </div>
+            <p>页面内容均由 AI 生成，仅供参考</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 全球市场柱状图
+            const globalCtx = document.getElementById('globalMarketChart').getContext('2d');
+            const globalChart = new Chart(globalCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['GKN', '住友电工', '日立化学', '吉凯恩', 'WEGMANN', '东睦股份', '铂科新材', '东睦科达', '韩国昌星'],
+                    datasets: [{
+                        label: '粉末冶金结构件（%）',
+                        data: [8, 7, 6, 0, 0, 0, 0, 0, 0],
+                        backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: '压缩机平衡块（%）',
+                        data: [0, 0, 0, 15, 12, 10, 0, 0, 0],
+                        backgroundColor: 'rgba(46, 204, 113, 0.7)',
+                        borderColor: 'rgba(46, 204, 113, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: '金属软磁粉芯（%）',
+                        data: [0, 0, 0, 0, '', 0, 21, 15, 12],
+                        backgroundColor: 'rgba(231, 76, 60, 0.7)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            stacked: false,
+                            title: {
+                                display: true,
+                                text: '企业名称',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        y: {
+                            stacked: false,
+                            beginAtZero: true,
+                            max: 40,
+                            title: {
+                                display: true,
+                                text: '市场占比（%）',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: '全球各细分市场企业占比分布'
+                        }
+                    }
+                }
+            });
+
+            // 中国市场柱状图
+            const chinaCtx = document.getElementById('chinaMarketChart').getContext('2d');
+            const chinaChart = new Chart(chinaCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['东睦股份', '华域汽车', '扬州保来得', '江门宏佳', '百达精工', '粤海华金', '铂科新材', '东睦科达', '天通磁材'],
+                    datasets: [{
+                        label: '粉末冶金结构件（%）',
+                        data: [26.7, 12, 7, 0, 0, 0, 0, '', 0],
+                        backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: '压缩机平衡块（%）',
+                        data: [0, 0, 0, 35, 25, 20, 0, 0, 0],
+                        backgroundColor: 'rgba(46, 204, 113, A0.7)',
+                        borderColor: 'rgba(46, 204, 113, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: '金属软磁粉芯（%）',
+                        data: [0, 0, 0, 0, 0, 0, 32, 20, 10],
+                        backgroundColor: 'rgba(231, 76, 60, 0.7)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            stacked: false,
+                            title: {
+                                display: true,
+                                text: '企业名称',font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        y: {
+                            stacked: false,
+                            beginAtZero: true,
+                            max: 40,
+                            title: {
+                                display: true,
+                                text: '市场占比（%）',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: '中国各细分市场企业占比分布'
+                        }
+                    }
+                }
+            });
+
+            // 表格排序功能
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+            
+            const comparer = (idx, asc) => (a, b) => {
+                const v1 = getCellValue(asc ? a : b, idx);
+                const v2 = getCellValue(asc ? b : a, idx);
+                return v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) 
+                    ? v1 - v2 
+                    : v1.toString().localeCompare(v2);
+            };
+            
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const table = th.closest('table');
+                    const tbody = table.querySelector('tbody');
+                    Array.from(tbody.querySelectorAll('tr'))
+                        .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                        .forEach(tr => tbody.appendChild(tr));
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
