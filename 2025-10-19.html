@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年10月新材料行业资讯</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #e2e8f0;
+            color: #475569;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .tag-blue {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+        .tag-green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .tag-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 16px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 0.75rem;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            transform-origin: top;
+            transform: scaleY(0);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 100;
+        }
+        .mobile-menu.active {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 导航条 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="text-xl font-bold text-blue-600">
+                <i class="fas fa-newspaper mr-2"></i>新材料行业资讯
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#powder" class="text-gray-600 hover:text-blue-600 transition-colors">粉末冶金</a>
+                <a href="#compressor" class="text-gray-600 hover:text-blue-600 transition-colors">压缩机平衡块</a>
+                <a href="#soft-magnetic" class="text-gray-600 hover:text-blue-600 transition-colors">金属软磁粉芯</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none" id="mobileMenuButton" aria-label="导航菜单">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- 移动端导航菜单 -->
+            <div class="mobile-menu md:hidden" id="mobileMenu">
+                <a href="#powder" class="text-gray-600 hover:text-blue-600 transition-colors flex items-center py-2">
+                    <i class="fas fa-cog mr-3 text-blue-500"></i>粉末冶金
+                </a>
+                <a href="#compressor" class="text-gray-600 hover:text-blue-600 transition-colors flex items-center py-2">
+                    <i class="fas fa-industry mr-3 text-blue-500"></i>压缩机平衡块
+                </a>
+                <a href="#soft-magnetic" class="text-gray-600 hover:text-blue-600 transition-colors flex items-center py-2">
+                    <i class="fas fa-magnet mr-3 text-blue-500"></i>金属软磁粉芯
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">2025年10月13日-19日</h1>
+            <p class="text-xl md:text-2xl">新材料行业一周资讯速览</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- 粉末冶金结构件 -->
+        <section id="powder" class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 section-title">一、粉末冶金结构件</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 中南大学粉末冶金研究院采购烧结炉设备 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月15日</span>
+                            <span class="tag tag-blue">设备采购</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">中南大学粉末冶金研究院采购烧结炉设备</h3>
+                        <p class="text-gray-600 mb-4">湖南烁科热工智能装备有限公司以489.8万元中标，设备型号RBN14-55x55x55-2SR型，将用于金属陶瓷材料烧结工艺研究。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">烧结炉</span>
+                            <span class="tag">中标公告</span>
+                        </div>
+                        <a href="https://www.bid360.com.cn/zbgs/U-vlxVg9k.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 海昌新材本周资金净流出2919.76万元 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月17日</span>
+                            <span class="tag tag-red">主力流出</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">海昌新材本周资金净流出2919.76万元</h3>
+                        <p class="text-gray-600 mb-4">海昌新材（300885）本周股价下跌8.69%，主力资金净流出2919.76万元，游资资金净流出3836.77万元。公司专注于粉末冶金精密结构件，越南生产基地建设按计划推进。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">资金流向</span>
+                            <span class="tag">粉末冶金</span>
+                        </div>
+                        <a href="https://wap.stockstar.com/detail/RB2025101900006712" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 东睦股份融资余额8.758亿元 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月17日</span>
+                            <span class="tag tag-blue">融资融券</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">东睦股份融资余额8.758亿元</h3>
+                        <p class="text-gray-600 mb-4">东睦股份（600114）10月17日融资净偿还943.6万元，融资余额8.758亿元。公司软磁材料业务收入同比增长37.61%，山西6万吨软磁基地项目启动。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">粉末冶金</span>
+                            <span class="tag">资金动态</span>
+                        </div>
+                        <a href="http://f10.eastmoney.com/NewsBulletin/Index?code=SH600114" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 压缩机平衡块 -->
+        <section id="compressor" class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 section-title">二、压缩机平衡块</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 中石化三机分公司采购平衡块2件 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月13日</span>
+                            <span class="tag tag-blue">平衡块采购</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">中石化三机分公司采购平衡块2件</h3>
+                        <p class="text-gray-600 mb-4">采购平衡块（型号HF301.01-01）2件，材质Q235A，用于HF型化工机改造，交货期2025年11月8日，报价截止10月16日。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">Q235A</span>
+                            <span class="tag">化工压缩机</span>
+                        </div>
+                        <a href="https://m.bidizhaobiao.com/info-690214552.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 鲁西集团压缩机配件询价含平衡盘密封 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月17日</span>
+                            <span class="tag tag-blue">压缩机配件</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">鲁西集团压缩机配件询价含平衡盘密封</h3>
+                        <p class="text-gray-600 mb-4">包含平衡盘迷宫密封、轴端密封等6类部件，要求质量管理体系认证，交货期2025年11月15日，报价截止10月13日。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">平衡盘迷宫密封</span>
+                            <span class="tag">化工设备</span>
+                        </div>
+                        <a href="https://m.bidcenter.com.cn/news-5-383054401.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 转子上端板平衡块铆钉设备集采招标 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月14日</span>
+                            <span class="tag tag-blue">集采招标</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">转子上端板平衡块铆钉设备集采招标</h3>
+                        <p class="text-gray-600 mb-4">美芝制冷设备有限公司集采转子上端板平衡块铆钉装配设备，近一年计划采购5套，技术要求参照附件协议，报名截止10月20日。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">平衡块装配</span>
+                            <span class="tag">铆钉设备</span>
+                        </div>
+                        <a href="https://zb.zhaobiao.cn/bidding_v_be1a2e79522fec595383c64b698e1662.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 金属软磁粉芯 -->
+        <section id="soft-magnetic" class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 section-title">三、金属软磁粉芯</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 天通股份高频铁氧体产业化进展 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月13日</span>
+                            <span class="tag tag-green">研发突破</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">天通股份高频铁氧体产业化进展</h3>
+                        <p class="text-gray-600 mb-4">高频铁氧体材料已实现产业化，应用于新能源汽车电驱系统和数据中心电源模块，目前产能利用率达90%。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">高频铁氧体</span>
+                            <span class="tag">新能源汽车</span>
+                        </div>
+                        <a href="https://m.10jqka.com.cn/20251010/c671637071.shtml" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 2025年软磁材料市场规模达75.2亿元 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月16日</span>
+                            <span class="tag tag-blue">市场报告</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">2025年软磁材料市场规模达75.2亿元</h3>
+                        <p class="text-gray-600 mb-4">新能源汽车占比35%，横店东磁、天通股份合计市占率超40%，高频低损耗材料成研发重点。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">金属软磁粉芯</span>
+                            <span class="tag">新能源需求</span>
+                        </div>
+                        <a href="https://www.docin.com/p-4914621092.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 东睦股份山西6万吨软磁基地建设 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-gray-500">2025年10月17日</span>
+                            <span class="tag tag-green">产能扩张</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">东睦股份山西6万吨软磁基地建设</h3>
+                        <p class="text-gray-600 mb-4">东睦股份子公司山西东睦磁电竞得150亩土地，用于建设年产6万吨软磁材料基地，总投资12亿元，预计2026年Q1投产，主要供应新能源汽车电机厂商。</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tag">软磁材料</span>
+                            <span class="tag">产业基地</span>
+                        </div>
+                        <a href="http://finance.sina.cn/2025-10-17/detail-infttsym2938296.d.html" class="text-blue-600 hover:underline flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i>查看原文
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>created by <a href="https://space.coze.cn" class="text-blue-600 hover:underline">coze space</a></p>
+            <p class="mt-2">页面内容均由 AI 生成，仅供参考</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端导航菜单切换
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                
+                // 切换图标
+                const icon = this.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // 点击导航链接后关闭移动端菜单
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        const icon = menuButton.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
