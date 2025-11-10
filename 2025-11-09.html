@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新材料行业资讯 - 2025年11月3日-9日</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .category-tag:hover, .category-tag.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .nav-scrolled {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .keyword-pill {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-date {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .read-more {
+            color: #3b82f6;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .read-more:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform-origin: top;
+            transform: scaleY(0);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 100;
+        }
+        
+        .mobile-menu.active {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .highlight-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: rgba(59, 130, 246, 0.2);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 页面头部 -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">新材料行业资讯</h1>
+            <p class="text-xl opacity-90">2025年11月3日-9日 行业动态速览</p>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300" id="mainNav">
+        <div class="container mx-auto max-w-5xl px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-microchip text-blue-600 mr-2"></i>
+                    <span class="font-semibold text-lg">新材料资讯</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden text-gray-600 focus:outline-none" id="mobileMenuButton" aria-label="导航菜单">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- 桌面端分类导航 -->
+                <div class="hidden md:flex space-x-1 overflow-x-auto py-2 scrollbar-hide">
+                    <button class="category-tag active px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="all">全部</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="超导材料">超导材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="电子化学品">电子化学品</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="高性能陶瓷">高性能陶瓷</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="粉末冶金">粉末冶金</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="金属软磁粉芯">金属软磁粉芯</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="生物基材料">生物基材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="智能材料">智能材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-category="金属粉末">金属粉末</button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div class="mobile-menu md:hidden" id="mobileMenu">
+                <div class="p-4 grid grid-cols-2 gap-2">
+                    <button class="category-tag active px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="all">全部</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="超导材料">超导材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="电子化学品">电子化学品</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="高性能陶瓷">高性能陶瓷</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="粉末冶金">粉末冶金</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="金属软磁粉芯">金属软磁粉芯</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="生物基材料">生物基材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="智能材料">智能材料</button>
+                    <button class="category-tag px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="金属粉末">金属粉末</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="container mx-auto max-w-5xl px-4 py-12">
+        <div class="grid grid-cols-1 gap-8" id="articles-container">
+            <!-- 超导材料 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="超导材料">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">1. 锗基超导材料实现零电阻导电</h2>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">超导材料</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月3日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【锗材料】</span>
+                    <span class="keyword-pill">【超导性】</span>
+                    <span class="keyword-pill">【量子器件】</span>
+                </div>
+                <p class="text-gray-600 mb-4">国际研究团队在《自然·纳米技术》发表论文，通过分子束外延技术制备出锗基超导材料，在1.2K温度下实现零电阻导电，为半导体工艺兼容的量子器件开发奠定基础。</p>
+                <a href="https://cj.sina.cn/articles/view/5597884738/14da8f14202001zqz4" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：证券时报</div>
+            </article>
+
+            <!-- 电子化学品 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="电子化学品">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">2. 瑞联新材光刻胶单体量产落地</h2>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">电子化学品</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月5日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【光刻胶】</span>
+                    <span class="keyword-pill">【半导体材料】</span>
+                    <span class="keyword-pill">【国产化】</span>
+                </div>
+                <p class="text-gray-600 mb-4">西安瑞联新材料宣布PSPI光刻胶单体实现吨级量产，纯度达99.999%，配套中芯国际14nm逻辑芯片产线，打破日本JSR垄断，单价较进口产品降低35%。</p>
+                <a href="http://m.toutiao.com/group/7569982443348853288/?upstream_biz=doubao" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：今日头条</div>
+            </article>
+
+            <!-- 高性能陶瓷 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="高性能陶瓷">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">3. 高耐磨微晶釉料技术突破</h2>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">高性能陶瓷</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月7日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【微晶釉料】</span>
+                    <span class="keyword-pill">【耐磨性】</span>
+                    <span class="keyword-pill">【建筑陶瓷】</span>
+                </div>
+                <p class="text-gray-600 mb-4">景德镇陶瓷大学研发的梯度晶化釉料，硬度达706Hv且透光率72%，耐磨转数达12000转（欧洲标准的2倍），已应用于诺贝尔陶瓷"超耐磨微晶岩板"。</p>
+                <a href="https://www.zqxrf.com/news.php?id=1291" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：中国陶瓷工业协会</div>
+            </article>
+
+            <!-- 粉末冶金 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="粉末冶金">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">4. 天工国际粉末核钢进入试产阶段</h2>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">粉末冶金</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月9日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【粉末核钢】</span>
+                    <span class="keyword-pill">【核聚变】</span>
+                    <span class="keyword-pill">【中子屏蔽】</span>
+                </div>
+                <p class="text-gray-600 mb-4">天工国际采用"粉末冶金+热等静压"工艺制备的核聚变用中子屏蔽材料，强化相尺寸≤4μm，拉伸强度达890MPa，实现小批量试产。</p>
+                <a href="https://mguba.eastmoney.com/mguba/article/0/1609003945" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：中国证券报</div>
+            </article>
+
+            <!-- 金属软磁粉芯 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="金属软磁粉芯">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">5. 工信部发布软磁材料能效标准</h2>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">金属软磁粉芯</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月6日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【能效标准】</span>
+                    <span class="keyword-pill">【软磁粉芯】</span>
+                    <span class="keyword-pill">【高频低损耗】</span>
+                </div>
+                <p class="text-gray-600 mb-4">工信部《金属软磁粉芯能效限定值》规定，2026年起铁硅系材料损耗需≤30mW/cm³（100kHz/20mT条件下），推动行业向高频化方向发展。</p>
+                <a href="https://www.miit.gov.cn/jgsj/jns/gzdt/art/2025/art_5bfebfafb41644419f4d4be86f0b6832.html" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：工信部官网</div>
+            </article>
+
+            <!-- 生物基材料 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="生物基材料">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">6. 七部门发文支持非粮生物基材料</h2>
+                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-medium">生物基材料</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月4日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【政策】</span>
+                    <span class="keyword-pill">【生物基材料】</span>
+                    <span class="keyword-pill">【非粮原料】</span>
+                </div>
+                <p class="text-gray-600 mb-4">工信部等七部门联合印发《石化化工行业稳增长工作方案》，提出开展非粮生物基材料典型案例推广，2026年生物基塑料替代率目标达20%。</p>
+                <a href="http://www.xinhuanet.com/20250926/f15e52fe83a44fa29f35011b49c74f40/c.html" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：新华网</div>
+            </article>
+
+            <!-- 智能材料 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="智能材料">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">7. "活金属"复合材料实现自我修复</h2>
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">智能材料</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月8日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【活金属】</span>
+                    <span class="keyword-pill">【自修复】</span>
+                    <span class="keyword-pill">【生物电子】</span>
+                </div>
+                <p class="text-gray-600 mb-4">宾厄姆顿大学将细菌内生孢子嵌入液态金属，开发出可自我修复的导电复合材料，在60℃加热30分钟即可修复10μm划痕，用于植入式医疗设备。</p>
+                <a href="http://m.toutiao.com/group/7569572585063596590/?upstream_biz=doubao" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：先进功能材料</div>
+            </article>
+
+            <!-- 金属粉末 -->
+            <article class="bg-white rounded-xl shadow-md p-6 card-hover fade-in" data-category="金属粉末">
+                <div class="flex items-start justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">8. 东睦股份三季报业绩大增50% MIM业务成增长引擎</h2>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">金属粉末</span>
+                </div>
+                <p class="article-date mb-4"><i class="far fa-clock mr-2"></i>2025年11月5日</p>
+                <div class="mb-4">
+                    <span class="keyword-pill">【MIM业务】</span>
+                    <span class="keyword-pill">【机器人】</span>
+                    <span class="keyword-pill">【AI算力】</span>
+                </div>
+                <p class="text-gray-600 mb-4">东睦股份2025年三季报显示，前三季度营收44.17亿元（+22.32%），归母净利润4.15亿元（+50.1%），毛利率提升至25.06%。MIM业务营收18.65亿元（+46.35%），为主要增长动力。公司布局机器人轴向磁通电机、AI算力芯片散热器等领域，华龙证券给予"增持"评级，预计2025-2027年PE 32.6x/26.8x/23.1x。</p>
+                <a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/815649738202/index.phtml" class="read-more inline-flex items-center" target="_blank">
+                    查看原文 <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <div class="mt-4 text-right text-xs text-gray-400">来源：新浪财经</div>
+            </article>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-microchip text-blue-400 mr-2 text-xl"></i>
+                        <span class="font-bold text-xl">新材料行业资讯</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">及时掌握行业动态，洞察材料科技前沿</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">数据更新时间：2025年11月9日</p>
+                    <p class="text-gray-500 mt-2 text-sm">© 2025 新材料行业资讯平台. 保留所有权利</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+                <p>created by <a href="https://space.coze.cn" class="text-blue-400 hover:text-blue-300 transition-colors">coze space</a></p>
+                <p class="mt-1">页面内容均由 AI 生成，仅供参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏滚动效果
+            const nav = document.getElementById('mainNav');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 10) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
+            });
+            
+            // 移动端菜单切换
+            const menuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                
+                // 切换图标
+                const icon = this.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // 点击页面其他区域关闭移动端菜单
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = document.getElementById('mainNav').contains(event.target);
+                
+                if (!isClickInsideNav && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    const icon = menuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // 分类筛选功能
+            const categoryTags = document.querySelectorAll('.category-tag');
+            const articles = document.querySelectorAll('article');
+            
+            categoryTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // 移除所有标签的活跃状态
+                    categoryTags.forEach(t => t.classList.remove('active'));
+                    // 添加当前标签的活跃状态
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // 筛选文章
+                    articles.forEach(article => {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                            // 添加动画效果
+                            setTimeout(() => {
+                                article.classList.add('fade-in');
+                            }, 50);
+                        } else {
+                            article.style.display = 'none';
+                            article.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // 为文章添加渐入动画
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
