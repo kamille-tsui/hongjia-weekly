@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025.11新材料资讯</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+        
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .category-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 3px;
+        }
+        
+        .link-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .external-link:hover .link-icon {
+            transform: translateX(3px);
+        }
+        
+        .news-source {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        .news-date {
+            font-size: 12px;
+            color: #64748b;
+        }
+        
+        .staggered-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .content-text {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+        
+        .tag-powder {
+            background-color: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+        }
+        
+        .tag-magnetic {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+        
+        .tag-metal {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 头部区域 -->
+    <header class="header-bg text-white py-12 px-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold mb-2">2025.11新材料资讯</h1>
+            <p class="text-blue-100">2025年11月17日-23日行业动态一览</p>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="container mx-auto px-4 py-8 max-w-2xl">
+        <!-- 粉末冶金领域 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 category-title">一、粉末冶金领域</h2>
+            
+            <!-- 资讯1 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.1s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月17日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 同花顺iNews</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">1. 东睦股份MIM技术拓展多领域应用</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    公司MIM技术平台已批量应用于折叠机铰链、AI服务器电机部件、医疗器械微创手术工具等领域，其中新能源车电驱系统精密零件月产能达300万件，采用钛合金材料实现减重40%，进入比亚迪海豹07供应链。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-powder"><i class="fas fa-microchip mr-1"></i> MIM技术</span>
+                    <span class="tag tag-powder"><i class="fas fa-car mr-1"></i> 新能源车</span>
+                    <span class="tag tag-powder"><i class="fas fa-weight-hanging mr-1"></i> 轻量化</span>
+                </div>
+                <a href="https://m.10jqka.com.cn/20251114/c672489429.shtml" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+            
+            <!-- 资讯2 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.2s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月18日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 和讯网</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">2. 鲁银投资增资新艺粉末扩大产能</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    鲁银投资增资5634.75万元扩建新艺粉末MIM生产线，新增年产能8000吨，产品用于新能源汽车电机铁芯，预计2026年Q1投产，达产后新增营收3.2亿元。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-powder"><i class="fas fa-industry mr-1"></i> 产能扩张</span>
+                    <span class="tag tag-powder"><i class="fas fa-bolt mr-1"></i> 电机铁芯</span>
+                    <span class="tag tag-powder"><i class="fas fa-chart-line mr-1"></i> 营收增长</span>
+                </div>
+                <a href="http://m.toutiao.com/group/7569966991231992361/?upstream_biz=doubao" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+        </section>
+        
+        <!-- 金属软磁粉芯材料领域 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 category-title">二、金属软磁粉芯材料领域</h2>
+            
+            <!-- 资讯3 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.3s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月21日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 东方财富网</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">3. 铂科新材AI服务器芯片电感业务增长</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    公司25Q3芯片电感业务收入环比增长138.92%，铁硅5代磁粉芯损耗较4代降低50%，适配英伟达H200 AI服务器电源模块，泰国基地月产能提升至1500万片，单机用量达16-24颗，价值量超2000元。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-magnetic"><i class="fas fa-microchip mr-1"></i> AI服务器</span>
+                    <span class="tag tag-magnetic"><i class="fas fa-bolt mr-1"></i> 低损耗</span>
+                    <span class="tag tag-magnetic"><i class="fas fa-chart-line mr-1"></i> 高增长</span>
+                </div>
+                <a href="https://data.eastmoney.com/report/zw_strategy.jshtml?encodeUrl=NPlkCtUt9kHEUdloAfWPbOtJJG03lDeOqggpysWSmJI=" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+            
+            <!-- 资讯4 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.4s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月20日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 豆丁网</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">4. 中国铁硅软磁粉芯行业产能突破18万吨</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    2025年中国铁硅软磁粉芯产能达18万吨，产量14.6万吨，光伏逆变器、新能源汽车OBC合计贡献65%需求增量，高频低损耗产品国产化率突破85%，纳米复合包覆技术使损耗降低18%。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-magnetic"><i class="fas fa-industry mr-1"></i> 产能突破</span>
+                    <span class="tag tag-magnetic"><i class="fas fa-solar-system mr-1"></i> 光伏</span>
+                    <span class="tag tag-magnetic"><i class="fas fa-flag-checkered mr-1"></i> 国产化</span>
+                </div>
+                <a href="https://www.docin.com/touch_new/preview_new.do?id=4919391642" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+        </section>
+        
+        <!-- 金属粉末材料领域 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 category-title">三、金属粉末材料领域</h2>
+            
+            <!-- 资讯5 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.5s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月22日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 网易新闻</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">5. 金源智能双认证钛合金粉末亮相TCT深圳展</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    金源智能3D打印钛合金粉末通过低碳认证与航空航天材料认证，氧含量≤120ppm，球形度＞99%，用于C929机身结构件打印，打破美国Carpenter公司垄断，2026年产能将提升至300吨/年。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-metal"><i class="fas fa-rocket mr-1"></i> 航空航天</span>
+                    <span class="tag tag-metal"><i class="fas fa-certificate mr-1"></i> 双认证</span>
+                    <span class="tag tag-metal"><i class="fas fa-3d-cube mr-1"></i> 3D打印</span>
+                </div>
+                <a href="http://m.163.com/dy/article/K8FLGEV4051186GP.html" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+            
+            <!-- 资讯6 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.6s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月19日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 豆丁网</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">6. 合金粉末市场规模2025年将突破600亿元</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    中国合金粉末市场规模预计达628亿元，镍基高温合金粉占比38%，钛合金粉增速最快（CAGR 22%），增材制造用粉需求占比将突破45%，受益于航空航天和医疗植入领域增长。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-metal"><i class="fas fa-chart-pie mr-1"></i> 市场规模</span>
+                    <span class="tag tag-metal"><i class="fas fa-temperature-high mr-1"></i> 高温合金</span>
+                    <span class="tag tag-metal"><i class="fas fa-heartbeat mr-1"></i> 医疗植入</span>
+                </div>
+                <a href="https://www.docin.com/touch_new/preview_new.do?id=4919138633" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+            
+            <!-- 资讯7 -->
+            <article class="article-card bg-white p-6 mb-6 card-shadow staggered-entry" style="animation-delay: 0.7s;">
+                <div class="flex items-center mb-3">
+                    <span class="news-date mr-4"><i class="far fa-calendar-alt mr-1"></i> 2025年11月19日</span>
+                    <span class="news-source"><i class="fas fa-newspaper mr-1"></i> 豆丁网</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">7. 高合金粉行业2025年市场规模达142亿元</h3>
+                <div class="content-text text-gray-700 mb-4">
+                    中国高合金粉产能突破8.5万吨，航空航天领域需求占比38%，真空感应熔炼气雾化技术使氧含量控制在100ppm以下，2030年市场规模预计突破260亿元，年均复合增长率12.8%。
+                </div>
+                <div class="flex flex-wrap mb-4">
+                    <span class="tag tag-metal"><i class="fas fa-chart-line mr-1"></i> 增长预测</span>
+                    <span class="tag tag-metal"><i class="fas fa-flask mr-1"></i> 先进工艺</span>
+                    <span class="tag tag-metal"><i class="fas fa-rocket mr-1"></i> 航空航天</span>
+                </div>
+                <a href="https://www.docin.com/p-4919682473.html" target="_blank" rel="noopener noreferrer" class="external-link inline-flex items-center text-blue-600 hover:text-blue-800">
+                    阅读原文 <i class="fas fa-external-link-alt ml-1 link-icon"></i>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto text-center text-gray-600 text-sm">
+            <p class="mb-2">created by <a href="https://space.coze.cn" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">coze space</a></p>
+            <p>页面内容均由 AI 生成，仅供参考</p>
+        </div>
+    </footer>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有卡片添加交错动画
+            const cards = document.querySelectorAll('.staggered-entry');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            cards.forEach(card => {
+                card.style.animationPlayState = 'paused';
+                observer.observe(card);
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
