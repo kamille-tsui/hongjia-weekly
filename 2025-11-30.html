@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>材料行业资讯 - 最新行业动态与技术前沿</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        
+        .news-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .tag:hover {
+            background-color: #bae6fd;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #0369a1;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .read-more:hover {
+            color: #0284c7;
+            transform: translateX(3px);
+        }
+        
+        .read-more i {
+            margin-left: 0.25rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .read-more:hover i {
+            transform: translateX(2px);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%);
+        }
+        
+        .mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* 适配不同屏幕尺寸的字体大小 */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* 滚动进度指示器 */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 100;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: #0ea5e9;
+            width: 0%;
+        }
+        
+        /* 关键词标签容器 */
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0.75rem 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 滚动进度指示器 -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- 头部区域 -->
+    <header class="header text-white py-6 px-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">材料行业资讯</h1>
+            <button id="menuButton" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="nav-link active">最新资讯</a>
+                <a href="#" class="nav-link">行业动态</a>
+                <a href="#" class="nav-link">技术前沿</a>
+                <a href="#" class="nav-link">政策解读</a>
+            </nav>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="mobile-menu px-4 py-2">
+            <a href="#" class="block py-3 px-2 text-gray-800 hover:bg-blue-50 rounded-md">最新资讯</a>
+            <a href="#" class="block py-3 px-2 text-gray-800 hover:bg-blue-50 rounded-md">行业动态</a>
+            <a href="#" class="block py-3 px-2 text-gray-800 hover:bg-blue-50 rounded-md">技术前沿</a>
+            <a href="#" class="block py-3 px-2 text-gray-800 hover:bg-blue-50 rounded-md">政策解读</a>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="container mx-auto py-8 px-4">
+        <!-- 资讯列表 -->
+        <div class="space-y-8">
+            <!-- 资讯卡片 1 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-28</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">中科院突破哈氏合金量产技术，聚变发电提前三年</h2>
+                <div class="keywords-container">
+                    <span class="tag">高温合金</span>
+                    <span class="tag">哈氏合金C276</span>
+                    <span class="tag">核聚变</span>
+                </div>
+                <p class="text-gray-600 mb-4">中科院金属所实现哈氏合金C276吨级量产，厚度0.046mm，900℃高温强度保持1200MPa，性能超进口材料。合肥BEST聚变装置建设提速，2030年将实现全球首次聚变发电演示，国产化率100%，打破欧美技术封锁。</p>
+                <a href="http://m.toutiao.com/group/7568429691725201960/?upstream_biz=doubao" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 2 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-26</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">天通股份非晶纳米晶软磁粉末基地投产</h2>
+                <div class="keywords-container">
+                    <span class="tag">软磁合金粉末</span>
+                    <span class="tag">非晶纳米晶</span>
+                    <span class="tag">新能源汽车</span>
+                </div>
+                <p class="text-gray-600 mb-4">天通股份与慧磁新材料合作建设的万吨级非晶纳米晶软磁粉末生产基地正式投产，材料饱和磁密达1.5T，损耗降低20%，适配新能源汽车800V高压平台电感，月产能500吨，供应宁德时代、比亚迪等企业。</p>
+                <a href="http://m.toutiao.com/group/7576487974230131206/?upstream_biz=doubao" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 3 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-25</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">东睦股份粉末冶金机器人部件量产</h2>
+                <div class="keywords-container">
+                    <span class="tag">PM不锈钢粉末</span>
+                    <span class="tag">机器人减速器</span>
+                    <span class="tag">轴向磁通电机</span>
+                </div>
+                <p class="text-gray-600 mb-4">东睦股份采用金属注射成形工艺量产机器人用谐波柔轮减速器，粉末粒度20-30μm，密度7.5g/cm³，精度达±0.02mm，已通过特斯拉Optimus机器人验证，月产能10万套，替代进口降低成本40%。</p>
+                <a href="https://xueqiu.com/4642157440/361615640" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 4 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-24</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">2025汽车粉末冶金市场规模预计突破260亿元</h2>
+                <div class="keywords-container">
+                    <span class="tag">粉末冶金</span>
+                    <span class="tag">新能源汽车</span>
+                    <span class="tag">轻量化技术</span>
+                </div>
+                <p class="text-gray-600 mb-4">中国粉末冶金汽车零部件市场2024年规模180亿元，2030年将达260亿元，年复合增长率7.2%。新能源汽车电驱系统部件需求激增，304/316L不锈钢粉末应用占比提升至45%，长三角地区产能占全国60%。</p>
+                <a href="https://www.docin.com/touch_new/preview_new.do?id=4918254279" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 5 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-27</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">稀土镁合金压铸技术实现汽车轻量化</h2>
+                <div class="keywords-container">
+                    <span class="tag">特种母合金</span>
+                    <span class="tag">稀土镁合金</span>
+                    <span class="tag">汽车零部件</span>
+                </div>
+                <p class="text-gray-600 mb-4">中科院长春应化所开发的稀土镁合金压铸技术，实现耐热耐蚀、高强高韧部件量产，应用于长安、一汽新能源汽车，减重30%，抗高温蠕变性能提升40%，打破国外技术垄断。</p>
+                <a href="http://www.001cndc.com/mobile/news/show.php?itemid=536" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 6 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-29</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">软磁粉末在AI服务器电感中的应用增长</h2>
+                <div class="keywords-container">
+                    <span class="tag">软磁合金粉末</span>
+                    <span class="tag">一体成型电感</span>
+                    <span class="tag">AI算力</span>
+                </div>
+                <p class="text-gray-600 mb-4">AI服务器单机电感用量达80-120个，推动软磁粉末需求增长。天智新基地新增产能500吨/月，铁硅合金粉末饱和磁密提升至1.8T，损耗降低15%，适配英伟达H100显卡电源模块。</p>
+                <a href="https://blog.51cto.com/u_13717764/14329316" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 7 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-30</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">高温合金K438粉末制备技术突破</h2>
+                <div class="keywords-container">
+                    <span class="tag">高温合金粉末</span>
+                    <span class="tag">等离子旋转电极制粉</span>
+                    <span class="tag">航空发动机</span>
+                </div>
+                <p class="text-gray-600 mb-4">金川集团采用等离子旋转电极技术制备K438高温合金粉末，粒径43-45μm，松装密度4.9g/cm³，无卫星粉及空心粉，用于激光增材制造航空发动机涡轮叶片，耐温达900℃。</p>
+                <a href="http://m.toutiao.com/group/7573300612327080457/?upstream_biz=doubao" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <!-- 资讯卡片 8 -->
+            <article class="news-card bg-white p-6 shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-sm text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025-11-28</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3 text-gray-800">特种合金材料市场年增速达8.5%</h2>
+                <div class="keywords-container">
+                    <span class="tag">特种母合金</span>
+                    <span class="tag">钛合金</span>
+                    <span class="tag">航空航天</span>
+                </div>
+                <p class="text-gray-600 mb-4">2030年全球特种合金市场规模将达450亿美元，钛合金占比35%，镍基高温合金需求增长12%。中国航空航天级特种中间合金用于飞机发动机部件，推动材料轻量化与高性能化。</p>
+                <a href="https://www.docin.com/touch_new/preview_new.do?id=4920401323" class="read-more" target="_blank">阅读原文 <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-16">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">材料行业资讯</h3>
+                    <p class="text-gray-400">提供最新、最全面的材料行业动态</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>created by <a href="https://space.coze.cn" class="text-blue-400 hover:text-blue-300 transition-colors">coze space</a></p>
+                <p class="mt-2">页面内容均由 AI 生成，仅供参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            
+            // 切换图标
+            const icon = menuButton.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!menuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                const icon = menuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // 滚动进度条
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // 为导航链接添加点击事件
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // 移除所有链接的active状态
+                navLinks.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // 为当前点击的链接添加active状态
+                e.target.classList.add('active');
+                
+                // 如果是移动端，点击后关闭菜单
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    const icon = menuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
