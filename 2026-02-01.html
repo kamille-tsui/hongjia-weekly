@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年1月26日-2月1日材料行业资讯</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .news-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .keyword-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .keyword-tag:hover {
+            transform: translateY(-2px);
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        
+        .source-link:hover {
+            transform: translateX(3px);
+        }
+        
+        .source-link i {
+            transition: transform 0.2s ease;
+        }
+        
+        .source-link:hover i {
+            transform: translateX(3px);
+        }
+        
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 2px;
+        }
+        
+        .staggered-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 导航栏滚动效果 */
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .news-card {
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .news-title {
+                font-size: 1.25rem;
+            }
+            
+            .content-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 py-4 px-6 transition-all duration-300" id="mainNav">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">
+                <i class="fas fa-microchip mr-2"></i>材料行业资讯
+            </h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#soft-magnetic" class="text-gray-600 hover:text-blue-600 transition-colors">软磁合金粉末</a>
+                <a href="#high-temperature" class="text-gray-600 hover:text-blue-600 transition-colors">高温合金</a>
+                <a href="#3d-printing" class="text-gray-600 hover:text-blue-600 transition-colors">3D打印金属粉末</a>
+                <a href="#mim-stainless" class="text-gray-600 hover:text-blue-600 transition-colors">MIM不锈钢粉末</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none" id="mobileMenuButton" aria-label="导航菜单">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div class="mobile-menu md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl mt-1 mx-6 overflow-hidden hidden" id="mobileMenu">
+            <a href="#soft-magnetic" class="block py-3 px-6 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">软磁合金粉末</a>
+            <a href="#high-temperature" class="block py-3 px-6 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">高温合金</a>
+            <a href="#3d-printing" class="block py-3 px-6 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">3D打印金属粉末</a>
+            <a href="#mim-stainless" class="block py-3 px-6 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">MIM不锈钢粉末</a>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">2026年1月26日-2月1日材料行业资讯</h1>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">
+                精选近期材料行业重要动态，涵盖软磁合金粉末、高温合金、3D打印金属粉末及MIM不锈钢粉末四大领域
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4">
+        <!-- 软磁合金粉末领域 -->
+        <section id="soft-magnetic" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-divider w-12 mr-4"></div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 section-title">一、软磁合金粉末领域</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 资讯1 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.1s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">新莱福：拟10.54亿元收购金南磁材 强化软磁材料布局</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-26</span>
+                        <span><i class="far fa-newspaper mr-1"></i>证券之星</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">软磁合金粉末</span>
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">收购</span>
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">金南磁材</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">新莱福公告拟发行股份及支付现金收购金南磁材100%股权，交易作价10.54亿元。金南磁材主营永磁材料、软磁材料及器件，2023-2025年9月营收分别为4.18亿、5.02亿、4.12亿元，此次收购将强化公司在软磁材料领域的技术布局。</p>
+                    <a href="http://m.toutiao.com/group/7599726403710222890/?upstream_biz=doubao" class="source-link text-blue-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 资讯2 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">铂科新材：DDR用金属软磁粉芯电感进入小批量测评</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-26</span>
+                        <span><i class="far fa-newspaper mr-1"></i>证券日报</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">软磁合金粉末</span>
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">DDR电感</span>
+                        <span class="keyword-tag bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">小批量测评</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">铂科新材研发的适用于DDR内存的金属软磁粉芯电感性能指标领先，已进入小批量测评阶段。该产品因小型化、耐大电流特性，适配新一代DDR内存电源管理需求，AI算力增长将打开市场空间。</p>
+                    <a href="https://appcert.eastmoney.com/info/detail/202601263631008978" class="source-link text-blue-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 高温合金领域 -->
+        <section id="high-temperature" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-divider w-12 mr-4"></div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 section-title">二、高温合金领域</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 资讯3 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">中信证券：高温合金等材料将迎来系统性弹性放量</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-27</span>
+                        <span><i class="far fa-newspaper mr-1"></i>证券时报</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">高温合金</span>
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">商业航天</span>
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">产能扩张</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">中信证券指出，2026-2030年商业航天核心材料从"技术验证"走向"批量产业化"，高强高导铜合金、铌/钽合金、高温合金及相关零部件将迎来系统性弹性放量，首次覆盖行业并给予"强大于市"评级。</p>
+                    <a href="http://m.toutiao.com/group/7599835445941256747/?upstream_biz=doubao" class="source-link text-orange-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 资讯4 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.4s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">钢研高纳：镍基高温合金产品应用于航空航天发动机</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-26</span>
+                        <span><i class="far fa-newspaper mr-1"></i>证券日报</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">高温合金</span>
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">镍基合金</span>
+                        <span class="keyword-tag bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">航空航天</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">钢研高纳在互动平台表示，公司主要生产镍基高温合金产品，已批量应用于国内主要批产和预研型号航空航天发动机，技术指标达到国际先进水平，2025年三季度航天用高温合金营收同比增长87%。</p>
+                    <a href="https://www.163.com/dy/article/KKF9HM4F051984TV.html" class="source-link text-orange-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3D打印金属粉末领域 -->
+        <section id="3d-printing" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-divider w-12 mr-4"></div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 section-title">三、3D打印金属粉末领域</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 资讯5 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.5s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">我国首次太空金属3D打印实验成功 技术达世界先进水平</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-28</span>
+                        <span><i class="far fa-newspaper mr-1"></i>今日头条</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">3D打印金属粉末</span>
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">太空制造</span>
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">微重力激光增材</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">我国利用"力鸿一号"亚轨道飞行器完成首次太空金属3D打印实验，攻克微重力物料输运与熔池控制技术，构件致密度超92%，力学性能一致性较地面提升30%，为航天器在轨维修、深空探测基地建设奠定基础。</p>
+                    <a href="http://m.toutiao.com/group/7600252479410668086/?upstream_biz=doubao" class="source-link text-purple-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 资讯6 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.6s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">易加增材：2米级金属3D打印设备助力航天强国建设</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-22</span>
+                        <span><i class="far fa-newspaper mr-1"></i>证券日报</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">3D打印金属粉末</span>
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">航天制造</span>
+                        <span class="keyword-tag bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">超大型设备</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">易加增材推出全球最大SLM金属3D打印设备M2050（三轴尺寸2米，64激光），可打印不锈钢、高温合金等材料，火箭发动机部件减重超50%，交付周期缩短至数周，公司正冲刺科创板募资12亿元扩产。</p>
+                    <a href="http://m.toutiao.com/group/7598156730543686196/?upstream_biz=doubao" class="source-link text-purple-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MIM不锈钢粉末领域 -->
+        <section id="mim-stainless" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-divider w-12 mr-4"></div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 section-title">四、MIM不锈钢粉末领域</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 资讯7 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.7s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">统联精密：MIM工艺成本优势显著 拓展智能终端应用</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-01-26</span>
+                        <span><i class="far fa-newspaper mr-1"></i>新浪财经</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">MIM不锈钢粉末</span>
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">智能眼镜</span>
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">成本优势</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">统联精密表示，在高精度、高复杂度零部件批量生产中，MIM工艺综合成本优势显著。公司MIM产品已应用于智能眼镜铰链、信号接收器等部件，越南基地投产满足海外需求，可转债募资5.76亿元投向轻质材料产线。</p>
+                    <a href="https://cj.sina.com.cn/articles/view/2311077472/89c03e6002002ha98?finpagefr=ttzz&froms=ttmp" class="source-link text-green-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 资讯8 -->
+                <div class="news-card bg-white shadow-md p-6 staggered-entry" style="animation-delay: 0.8s;">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 news-title">哈森股份：MIM粉已送样下游客户</h3>
+                    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+                        <span class="mr-6"><i class="far fa-calendar-alt mr-1"></i>2026-02-01</span>
+                        <span><i class="far fa-newspaper mr-1"></i>新浪财经</span>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">MIM不锈钢粉末</span>
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">钛粉</span>
+                        <span class="keyword-tag bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mr-2 mb-2">送样进展</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 content-text">哈森股份子公司哈森唯特的钛粉、MIM粉已中试成功并送样下游客户，湖南益阳园区规划数百吨产能。公司3D打印相关业务2025年营收267万元，占比不足0.2%，目前对业绩无明显影响。</p>
+                    <a href="https://finance.sina.com.cn/jjxw/2026-02-01/doc-inhkitqx1432325.shtml" class="source-link text-green-600 font-medium text-sm" target="_blank">
+                        查看原文 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">材料行业资讯</h3>
+                    <p class="text-gray-400">定期更新材料行业最新动态与技术进展</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-weixin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-weibo text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>created by <a href="https://space.coze.cn" class="text-blue-400 hover:text-blue-300 transition-colors">coze space</a></p>
+                <p class="mt-2">页面内容均由 AI 生成，仅供参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 点击移动端菜单项后关闭菜单
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 监听元素进入视口并触发动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.staggered-entry').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
