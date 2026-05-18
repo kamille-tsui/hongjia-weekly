@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新材料细分领域行业资讯（2026年5月11日-5月17日）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .period-info {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .period-info strong {
+            color: #667eea;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .category {
+            margin-bottom: 30px;
+        }
+
+        .category-header {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .category-header h2 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .category-header .company-list {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .news-card {
+            background-color: #fff;
+            margin-bottom: 15px;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease;
+        }
+
+        .news-card:active {
+            transform: scale(0.98);
+        }
+
+        .news-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .news-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+        }
+
+        .news-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            color: #666;
+        }
+
+        .news-tag.date {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .news-tag.company {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .news-tag.tech {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .news-tag.app {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+
+        .news-tag.project {
+            background-color: #e1f5fe;
+            color: #0288d1;
+        }
+
+        .news-tag.exhibition {
+            background-color: #fce4ec;
+            color: #c2185b;
+        }
+
+        .news-tag.patent {
+            background-color: #f5f5f5;
+            color: #616161;
+        }
+
+        .news-summary {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .news-link {
+            display: inline-block;
+            color: #1a73e8;
+            font-size: 0.85rem;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .news-link:active {
+            color: #0d47a1;
+        }
+
+        .keywords {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .keywords span {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            .category-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .news-title {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>新材料细分领域行业资讯</h1>
+        <p>2026年5月11日 - 5月17日</p>
+    </header>
+
+    <div class="period-info">
+        资讯统计期间：<strong>2026年5月11日 至 5月17日</strong> | 共收集 <strong>16</strong> 条资讯
+    </div>
+
+    <div class="container">
+        <!-- 粉末冶金 PM/MIM -->
+        <section class="category">
+            <div class="category-header">
+                <h2>粉末冶金 PM/MIM</h2>
+                <div class="company-list">龙头企业：东睦股份、精研科技、海昌新材、米莫金属</div>
+            </div>
+
+            <article class="news-card">
+                <h3 class="news-title">东睦股份拟投资11亿元购地建科技项目 加速向机器人等高科技领域转型</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag company">东睦股份</span>
+                    <span class="news-tag project">战略转型</span>
+                </div>
+                <div class="keywords">
+                    <span>东睦股份</span>
+                    <span>科技项目</span>
+                    <span>机器人</span>
+                </div>
+                <p class="news-summary">东睦股份公告拟使用自有或自筹资金在宁波市鄞州区购买约70亩土地使用权，总投资11亿元建设新科技项目，其中固定资产投资约10亿元，项目将分5年以上分批分期建设。公司正将粉末冶金技术优势延伸至机器人、AI算力、高端消费电子等高增长赛道，已构建了轴向磁通电机、行星减速器等机器人产品矩阵。</p>
+                <a href="https://www.toutiao.com/article/7638611355007861283/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">MIM粉末冶金非标定制评测发布 四家企业制造实力深度对比</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-15</span>
+                    <span class="news-tag">行业评测</span>
+                    <span class="news-tag tech">MIM技术</span>
+                </div>
+                <div class="keywords">
+                    <span>MIM粉末冶金</span>
+                    <span>非标定制</span>
+                    <span>企业评测</span>
+                </div>
+                <p class="news-summary">本次评测选取四家行业代表性企业，从精度标准、定制响应能力、供应链稳定性、成本控制等核心维度展开横向对比。深圳市斯蒙奇科技有限公司提交的AI机器人关节零件样本精度达到GB/T38192-2019PL1级、GB/T10095.6级，单批次产能可超过10万件，核心制程100%自制，紧急订单响应速度较行业平均提升50%。</p>
+                <a href="https://www.toutiao.com/article/7640085211304247849/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">2026金属粉末注射成型工艺核心突破与汽车领域应用前景发布</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag">技术报告</span>
+                    <span class="news-tag app">汽车领域</span>
+                </div>
+                <div class="keywords">
+                    <span>MIM工艺突破</span>
+                    <span>汽车领域</span>
+                    <span>应用前景</span>
+                </div>
+                <p class="news-summary">行业正致力于开发新型高固相含量喂料体系，结合超精密模具设计与先进的模流仿真优化技术，显著提升了生坯的成型精度与致密度。脱脂与烧结工艺窗口的重构，特别是催化脱脂与真空烧结技术的迭代，使得复杂结构件的内部缺陷率大幅降低。预计到2026年，汽车领域在MIM下游应用中的占比将从目前的15%提升至25%以上。</p>
+                <a href="https://m.book118.com/html/2026/0510/8106131007010071.shtm" target="_blank" class="news-link">原文链接</a>
+            </article>
+        </section>
+
+        <!-- 3D打印金属粉末 -->
+        <section class="category">
+            <div class="category-header">
+                <h2>3D打印金属粉末</h2>
+                <div class="company-list">龙头企业：铂力特、有研粉材、华曙高科、西安赛隆</div>
+            </div>
+
+            <article class="news-card">
+                <h3 class="news-title">金石三维西南总部投产 建成千台设备AI+3D打印工厂</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-16</span>
+                    <span class="news-tag company">金石三维</span>
+                    <span class="news-tag tech">AI+3D打印</span>
+                </div>
+                <div class="keywords">
+                    <span>金石三维</span>
+                    <span>AI+3D打印</span>
+                    <span>千台设备</span>
+                </div>
+                <p class="news-summary">金石三维西南总部项目在成都经开区正式投产，项目总投资35亿元。已建成约1万平方米过渡性生产基地，布局SLM金属打印、SLA光固化、SLS尼龙、FGF大尺寸颗粒打印、全彩3D打印及CNC加工等上千台套高端设备。项目聚焦“AI+3D打印”融合创新，形成“研发-验证-小试-中试”全链路能力。</p>
+                <a href="https://www.powdersight.com/news/list" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">海目星钛合金3D打印工艺完成技术验证 加工效率实现翻倍</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag company">海目星</span>
+                    <span class="news-tag tech">钛合金3D打印</span>
+                </div>
+                <div class="keywords">
+                    <span>海目星</span>
+                    <span>钛合金3D打印</span>
+                    <span>效率翻倍</span>
+                </div>
+                <p class="news-summary">海目星宣布其钛合金3D打印工艺已完成技术打磨与验证，具备产业化量产落地条件。依托自研BST空间光整形核心技术，对光路进行深度优化，显著提升了激光能量的利用效率，实现了加工效率翻倍的成果。技术已全面覆盖钛合金、树脂、铜粉等主流打印材料体系，其中钛合金工艺的成熟度最高。</p>
+                <a href="https://www.toutiao.com/article/7638570529238843919/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">有研粉材3D打印铜粉可用于AI服务器液冷冷板 热阻最高降32%</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag company">有研粉材</span>
+                    <span class="news-tag app">AI服务器</span>
+                </div>
+                <div class="keywords">
+                    <span>有研粉材</span>
+                    <span>3D打印铜粉</span>
+                    <span>AI服务器散热</span>
+                </div>
+                <p class="news-summary">有研粉材在投资者互动平台确认，公司生产的3D打印铜粉可用于AI服务器液冷冷板。采用拓扑优化设计的铜冷板，相比传统方块针翅冷板，热阻最多可降低32%，压降最多降低68%。铜的优异导热性能结合3D打印的自由成型能力，允许制造复杂内部流道，精准贴合芯片发热点，从而提升散热效率并降低能耗。</p>
+                <a href="https://www.toutiao.com/article/7638616112451699252/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">2026年深圳国际3D打印、增材制造展览会举办 展示金属粉末材料及3D打印设备</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-13</span>
+                    <span class="news-tag exhibition">行业展会</span>
+                    <span class="news-tag tech">3D打印设备</span>
+                </div>
+                <div class="keywords">
+                    <span>3D打印展会</span>
+                    <span>金属粉末材料</span>
+                    <span>增材制造</span>
+                </div>
+                <p class="news-summary">深圳国际3D打印及增材制造展览会（PMCC EXPO）于2026年5月13-15日在深圳国际会展中心举办，展出面积15018平方米，有319家企业参展。展会展示了3D打印硬件及核心部件、3D打印材料、3D打印服务等产品领域，其中金属粉末材料包括模具钢、钛合金、铝合金以及CoCrMo合金、铁镍合金等。</p>
+                <a href="https://www.shifair.com/exhibitionDetails/5840.html" target="_blank" class="news-link">原文链接</a>
+            </article>
+        </section>
+
+        <!-- 软磁合金磁芯 -->
+        <section class="category">
+            <div class="category-header">
+                <h2>软磁合金磁芯</h2>
+                <div class="company-list">龙头企业：铂科新材、横店东磁、东阳光、武钢有限</div>
+            </div>
+
+            <article class="news-card">
+                <h3 class="news-title">春光集团在深交所创业板上市 首日涨幅达633% 募资7.3亿元用于智慧电源磁电材料项目</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag company">春光集团</span>
+                    <span class="news-tag project">IPO上市</span>
+                </div>
+                <div class="keywords">
+                    <span>春光集团</span>
+                    <span>IPO上市</span>
+                    <span>软磁铁氧体</span>
+                </div>
+                <p class="news-summary">山东春光科技集团股份有限公司在深交所创业板上市，截至收盘，该股报97.50元，涨幅633.08%，成交额35.66亿元，总市值214.24亿元。公司主营业务为软磁铁氧体磁粉的研发、生产和销售，并沿产业链发展软磁铁氧体磁心、电子元器件和电源等产品，此次募资将用于智慧电源磁电材料项目等。</p>
+                <a href="https://www.toutiao.com/article/7638536439306715675/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">2026年中国金属软磁磁芯行业市场规模预计达93.9亿元 同比增长24.9%</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag">市场报告</span>
+                    <span class="news-tag app">光伏储能</span>
+                </div>
+                <div class="keywords">
+                    <span>金属软磁磁芯</span>
+                    <span>市场规模</span>
+                    <span>光伏储能</span>
+                </div>
+                <p class="news-summary">2026年中国金属软磁磁芯行业市场规模预计达93.9亿元，同比增长24.9%，需求量预计达23.5万吨，同比增长16.9%。主要增量来自光伏储能配套电感（预计新增需求4.2万吨）、800V高压平台新能源汽车车载充电机（预计新增需求2.7万吨）及AI服务器电源模块（预计新增需求0.9万吨）三大新兴拉动力。</p>
+                <a href="https://www.docin.com/p-4989159168.html" target="_blank" class="news-link">原文链接</a>
+            </article>
+        </section>
+
+        <!-- 铜基粉末材料 -->
+        <section class="category">
+            <div class="category-header">
+                <h2>铜基粉末材料</h2>
+                <div class="company-list">龙头企业：博迁新材、中铝集团、乐凯胶片</div>
+            </div>
+
+            <article class="news-card">
+                <h3 class="news-title">2026年铜基复合粉体优选指南发布 技术创新与稳定供应并重</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-14</span>
+                    <span class="news-tag">行业指南</span>
+                    <span class="news-tag tech">技术创新</span>
+                </div>
+                <div class="keywords">
+                    <span>铜基复合粉体</span>
+                    <span>供应商</span>
+                    <span>技术创新</span>
+                </div>
+                <p class="news-summary">随着全球制造业向高端化、精密化方向持续迈进，粉末冶金、金刚石工具、摩擦材料及含油轴承等产业对铜基复合粉体的性能与稳定性提出了更高要求。杭州金昇粉体新材料有限公司凭借深厚的产业积淀与规模化生产能力，成为值得优先关注的供应商，其铜包铁粉、青铜粉660等产品具有氧含量低、成分均匀性高、烧结致密性好等显著特点。</p>
+                <a href="https://m.sohu.com/a/1022730781_122547589/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">铜陵国传电子材料科技有限公司发布超细电解铜粉 用于热导管毛细结构等领域</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag company">铜陵国传电子</span>
+                    <span class="news-tag app">热导管</span>
+                </div>
+                <div class="keywords">
+                    <span>电解铜粉</span>
+                    <span>热导管</span>
+                    <span>粉末冶金</span>
+                </div>
+                <p class="news-summary">铜陵国传电子材料科技有限公司生产的粉末冶金和结构件用铜粉，具有收缩率稳定及烧结密度高的特点，可用于制造热导管毛细结构，该毛细结构具有高的孔隙率和良好的毛细作用力，使热导管的热传导效率高。纯铜粉还被广泛应用于电子产品散热、粉末冶金零件、焊接以及热喷涂等领域，作为焊膏和热喷涂工艺的原料。</p>
+                <a href="http://m.pmbiz.com.cn/gq_show.asp?id=37812" target="_blank" class="news-link">原文链接</a>
+            </article>
+        </section>
+
+        <!-- 多孔过滤金属材料 -->
+        <section class="category">
+            <div class="category-header">
+                <h2>多孔过滤金属材料</h2>
+                <div class="company-list">龙头企业：安泰科技、中核科技、西部宝德</div>
+            </div>
+
+            <article class="news-card">
+                <h3 class="news-title">黄铜粉末烧结滤管产品发布 高透气性耐腐蚀 适用于化工净化等领域</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag">产品发布</span>
+                    <span class="news-tag app">化工净化</span>
+                </div>
+                <div class="keywords">
+                    <span>黄铜烧结滤管</span>
+                    <span>高透气性</span>
+                    <span>化工净化</span>
+                </div>
+                <p class="news-summary">盈宝盛发布的黄铜粉末烧结滤管采用高纯度铜合金粉末经高温烧结工艺制成，是一种结构均匀、孔隙可控的多孔金属过滤元件。产品过滤精度稳定可靠，可精准拦截0.2~100μm范围内的悬浮颗粒与杂质；孔隙率可达28%~45%，气液流通顺畅，压降损失小；整体烧结成型，抗压强度高，可承受≥2MPa的工作压力；最高耐温可达180℃，适配高温工况与温度冲击场景。</p>
+                <a href="https://m.smm.cn/b/info/774502" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">金属多孔烧结过滤碟片技术解析 应对高温高压和强腐蚀性介质精密分离挑战</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-13</span>
+                    <span class="news-tag">技术解析</span>
+                    <span class="news-tag tech">烧结工艺</span>
+                </div>
+                <div class="keywords">
+                    <span>金属多孔烧结碟片</span>
+                    <span>烧结工艺</span>
+                    <span>精密分离</span>
+                </div>
+                <p class="news-summary">金属多孔烧结过滤碟片选用优质的超精金属粉末，通过精确的模具设计，在特定的高温氛围下，让粉末颗粒的接触点发生原子间的扩散与冶金结合，形成形态复杂、曲折但相互连通的迷宫式孔隙通道。碟片可选用316L不锈钢、哈氏合金与英科耐尔合金、钛及其合金、蒙乃尔合金等多种材质，能适配从液氢、液氮的深冷环境，到熔融钠、高温烟气的复杂氛围。</p>
+                <a href="https://m.sohu.com/a/1021823255_122196198/" target="_blank" class="news-link">原文链接</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">烧结滤芯凭什么成为工业过滤行业首选？材质多样、性能卓越、可再生复用</h3>
+                <div class="news-meta">
+                    <span class="news-tag date">2026-05-11</span>
+                    <span class="news-tag">行业指南</span>
+                    <span class="news-tag app">工业过滤</span>
+                </div>
+                <div class="keywords">
+                    <span>烧结滤芯</span>
+                    <span>工业过滤</span>
+                    <span>可再生复用</span>
+                </div>
+                <p class="news-summary">烧结滤芯采用先进的粉末冶金烧结工艺，以金属、陶瓷、高分子等不同材质的粉末为原料，形成具有三维连通孔隙结构的多孔过滤元件，可实现“深层过滤+表面拦截”双重作用。滤芯材质选择丰富，金属类包括304/316L不锈钢、钛合金、哈氏合金等；非金属类包括陶瓷、PE/PP/PTFE等。滤芯具备耐压抗造、过滤精准、耐温耐腐、可再生复用等核心优势，应用领域覆盖工业生产与环保净化全链条。</p>
+                <a href="https://www.toutiao.com/article/7638514746722910756/" target="_blank" class="news-link">原文链接</a>
+            </article>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>本页面资讯汇总自公开网络渠道，仅供参考</p>
+        <p>江门宏佳新材料科技有限公司 | 细分领域行业资讯汇总</p>
+    </footer>
+</body>
+</html>
